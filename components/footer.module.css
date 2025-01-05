@@ -1,0 +1,9 @@
+.footer {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.footer p {
+  margin-bottom: 50px;
+  font-size: 1.25rem;
+}

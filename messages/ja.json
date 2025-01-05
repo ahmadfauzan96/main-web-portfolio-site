@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Ahmadの研究室",
+    "description": "Ahmad Fauzan Bagaskoroの主要ポートフォリオ・ウェブサイトです。"
+  },
+  "navbar": {
+    "home": "ホーム",
+    "portfolio": "ポートフォリオ",
+    "localeSelector": "サイト言語"
+  },
+  "header": {
+    "greetings": "こんにちは！私は<strong>Ahmad Fauzan Bagaskoro</strong>です。",
+    "whoAmI": "私はウェブ開発者です。"
+  },
+  "aboutMe": {
+    "title": "私について",
+    "content": [
+      "私はAhmad Fauzan Bagaskoroで、Ahmad・Fauzan・Bagas・あきらなどと申します。私はウェブ開発者の志望者です。数学や数字・分析的な思考・問題解決が得意です。細部にこだわるし、論理的だし、ウェブ閲覧に奇麗なユーザーインターフェースと快適なユーザーエクスペリエンスを作成・ウェブサイトでタイポグラフィー・国際化などに興味があります。",
+      "暇な時には、音楽を聞くのが好きです。嵐や熊猫堂ProducePandasなどのアジアからアイドルグループのファンです。"
+    ]
+  },
+  "skillsAndKnowledge": {
+    "title": "スキル・知識",
+    "frontEndSkills": { "title": "フロントエンドウェブ開発：" },
+    "backEndSkills": { "title": "バックエンドウェブ開発：" },
+    "databaseSkills": { "title": "データベース：" },
+    "otherSkills": { "title": "他のプログラミング言語：" }
+  },
+  "contactMe": { "text": "連絡先" },
+  "portfolio": {
+    "title": "ポートフォリオ",
+    "explanations": [
+      "自分が作成したポートフォリオです。もっと学び、経験を積むにつれて、分量が増え続けます。"
+    ]
+  },
+  "sourceCode": { "link": "ソースコード" },
+  "gyeeExcerpts": {
+    "introductory": "英語版の「サンクタス戦記」というRPGゲームからの抜粋達、<a href='https://translate.google.com'>Google翻訳</a>で色々な言語に翻訳されました。"
+  }
+}

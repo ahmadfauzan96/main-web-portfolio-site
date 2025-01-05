@@ -1,0 +1,32 @@
+.container {
+  margin: auto;
+  padding: auto 50px;
+}
+
+.title {
+  text-align: center;
+  font-style: italic;
+  padding: 0 50px;
+}
+
+.title a {
+  text-decoration: underline;
+}
+
+.title a:hover {
+  text-decoration: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.content li div {
+  padding: auto 25rem;
+  margin: 5px 15px 5px;
+  width: 200px;
+  text-align: start;
+}

@@ -1,0 +1,47 @@
+.header {
+  text-align: center;
+  padding: 5rem 10rem 5rem;
+}
+
+.header-ja {
+  font-family: "Noto Sans", "Noto Sans JP", sans-serif;
+}
+
+.header-ko {
+  font-family: "Noto Sans", "Noto Sans KR", sans-serif;
+}
+
+.header-zhs {
+  font-family: "Noto Sans", "Noto Sans SC", sans-serif;
+}
+
+.header-zht {
+  font-family: "Noto Sans", "Noto Sans TC", sans-serif;
+}
+
+.header-yue {
+  font-family: "Noto Sans", "Noto Sans HK", sans-serif;
+}
+
+.header-th {
+  font-family: "Noto Sans", "Noto Sans Thai", sans-serif;
+}
+
+.header-ar {
+  font-family: "Noto Sans", "Noto Sans Arabic", sans-serif;
+}
+
+.header-he {
+  font-family: "Noto Sans", "Noto Sans Hebrew", sans-serif;
+}
+
+.header-ta {
+  font-family: "Noto Sans", "Noto Sans Tamil", sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

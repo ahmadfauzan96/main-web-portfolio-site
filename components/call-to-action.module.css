@@ -1,0 +1,20 @@
+.ctas {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon {
+  background-color: transparent;
+  border: none;
+  color: light-dark(#021526, #e2e2b6);
+}
+
+.icon:hover {
+  color: light-dark(#304c89, #ab8b09);
+}
+
+.icon svg {
+  width: 2rem;
+  height: 2rem;
+}

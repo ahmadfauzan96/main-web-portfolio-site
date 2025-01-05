@@ -38,3 +38,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/websiteplanet.com-favicons.zip
+/favicon_io.zip

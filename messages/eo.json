@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Laboratorio de Ahmad",
+    "description": "Precipa pordfolioj retejo de Ahmad Fauzan Bagaskoro."
+  },
+  "navbar": {
+    "home": "Ĉefpaĝo",
+    "portfolio": "Pordfolioj",
+    "localeSelector": "Reteja Lingvo"
+  },
+  "header": {
+    "greetings": "Saluton! Mi estas <strong>Ahmad Fauzan Bagaskoro</strong>.",
+    "whoAmI": "Mi estas retprogramiston."
+  },
+  "aboutMe": {
+    "title": "Pri Mi",
+    "content": [
+      "Mia nomo estas Ahmad Fauzan Bagaskoro. Vi povas voki min Ahmad, Fauzan, Bagas, aŭ Akira. Mi estas la aspirantan retprogramiston. Mi estas bona kun matematikon kaj nombron, analizan pensadon, kaj problemoj solvantaj kapablojn. Mi estas detale orientita, logika, kaj pasia pri krei belajn uzantinterfacojn kaj agrablan spertojn de uzantojn en retumado, tipografion en retejo, kaj internaciigon.",
+      "En mia libera tempo, mi ŝatas aŭskulti muzikojn. Mi estas la ŝatinton de Azia idolgrupojn, kiel ekzemple Arashi kaj Produce Pandas."
+    ]
+  },
+  "skillsAndKnowledge": {
+    "title": "Kapabloj kaj Scioj",
+    "frontEndSkills": { "title": "Antaŭa Reto-disvolviĝo: " },
+    "backEndSkills": { "title": "Malantaŭa Reto-disvolviĝo: " },
+    "databaseSkills": { "title": "Datumbazoj: " },
+    "otherSkills": { "title": "Aliaj programlingvoj: " }
+  },
+  "contactMe": { "text": "Kontaktu Min" },
+  "portfolio": {
+    "title": "Pordfolioj",
+    "explanations": [
+      "Kelka pordfolioj kio mi kreis. Dum mi lernas pli kaj akiras pli da sperto, la nombro daŭre kreskos."
+    ]
+  },
+  "sourceCode": { "link": "Fontkodo" },
+  "gyeeExcerpts": {
+    "introductory": "Eltiraĵoj de RPG-ludo aplikaĵo titolita kio «GYEE», tradukita al multajn lingvojn kun <a href='https://translate.google.com'>Google Tradukilo</a>."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Ahmad’s Laboratory",
+    "description": "Ahmad Fauzan Bagaskoro’s main portfolio site."
+  },
+  "navbar": {
+    "home": "Home",
+    "portfolio": "Portfolios",
+    "localeSelector": "Site Language"
+  },
+  "header": {
+    "greetings": "Hello! I am <strong>Ahmad Fauzan Bagaskoro</strong>.",
+    "whoAmI": "I am a web developer."
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "content": [
+      "My name is Ahmad Fauzan Bagaskoro. I go by Ahmad, Fauzan, Bagas, or Akira. I am an aspiring web developer. I am good with math and number, analytical thinking, and problem solving. I am detail-oriented, logical, and passionate about creating nice user interface and pleasant user experience in web-browsing, typography in website, and internationalization.",
+      "In my free time, I love listening to music. I am a fan of some Asian idol groups such as Arashi and Produce Pandas."
+    ]
+  },
+  "skillsAndKnowledge": {
+    "title": "Skills and Knowledges",
+    "frontEndSkills": { "title": "Front-End Web Development: " },
+    "backEndSkills": { "title": "Back-End Web Development: " },
+    "databaseSkills": { "title": "Database: " },
+    "otherSkills": { "title": "Other programming languages: " }
+  },
+  "contactMe": { "text": "Contact Me" },
+  "portfolio": {
+    "title": "Portfolios",
+    "explanations": [
+      "Some portfolios that I have made. As I learn more and gain more experience, the number will keep increasing."
+    ]
+  },
+  "sourceCode": { "link": "Source Code" },
+  "gyeeExcerpts": {
+    "introductory": "Excerpts from a role-playing mobile game application titled “GYEE”, translated to many languages by <a href='https://translate.google.com'>Google Translate</a>."
+  }
+}

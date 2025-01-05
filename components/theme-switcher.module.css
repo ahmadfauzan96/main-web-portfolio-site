@@ -1,0 +1,40 @@
+.switcher:dir(ltr) {
+  margin-left: 1.25rem;
+}
+
+.switcher:dir(rtl) {
+  margin-right: 1.25rem;
+}
+
+.button {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.button:hover {
+  background-color: light-dark(#e8e5da, #304c89);
+}
+
+@media (prefers-color-scheme: light) {
+  .button {
+    border-color: #1f2937;
+    color: #1f2937;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .button {
+    border-color: #e2e2b6;
+    color: #e2e2b6;
+  }
+}
+
+.button svg {
+  display: block;
+}

@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "title": "Laboratorium Ahmad",
+    "description": "Situs portofolio utama Ahmad Fauzan Bagaskoro."
+  },
+  "navbar": {
+    "home": "Utama",
+    "portfolio": "Portofolio",
+    "localeSelector": "Bahasa Situs"
+  },
+  "header": {
+    "greetings": "Halo! Nama saya <strong>Ahmad Fauzan Bagaskoro</strong>.",
+    "whoAmI": "Saya seorang pengembang web."
+  },
+  "aboutMe": {
+    "title": "Tentang Saya",
+    "content": [
+      "Nama saya Ahmad Fauzan Bagaskoro. Saya bisa dipanggil Ahmad, Fauzan, Bagas, atau Akira. Saya ingin menjadi seorang pengembang web. Saya memiliki kemampuan dalam matematika dan angka, berpikir analitis, dan pemecahan masalah. Saya berorientasi pada detail, logis, dan memiliki <em>passion</em> dalam menciptakan antarmuka pengguna yang indah dan pengalaman pengguna yang menyenangkan dalam penjelajahan web, tipografi dalam situs web, dan internasionalisasi.",
+      "Di waktu luang saya, saya suka mendengarkan musik. Saya adalah penggemar kelompok idola Asia seperti Arashi dan Produce Pandas."
+    ]
+  },
+  "skillsAndKnowledge": {
+    "title": "Kemampuan dan Pengetahuan",
+    "frontEndSkills": { "title": "Pengembangan Web <em>Front-End</em>: " },
+    "backEndSkills": { "title": "Pengembangan Web <em>Back-End</em>: " },
+    "databaseSkills": { "title": "Basis Data: " },
+    "otherSkills": { "title": "Bahasa pemrograman lainnya: " }
+  },
+  "contactMe": { "text": "Hubungi Saya" },
+  "portfolio": {
+    "title": "Portofolio",
+    "explanations": [
+      "Beberapa portofolio yang sudah saya buat. Seiring dengan pembelajaran dan pengalaman yang saya dapatkan, jumlahnya akan terus bertambah."
+    ]
+  },
+  "sourceCode": { "link": "Kode Sumber" },
+  "gyeeExcerpts": {
+    "introductory": "Kutipan dari aplikasi gim bermain-peran bernama “GYEE”, diterjemahkan ke dalam banyak bahasa dengan <a href='https://translate.google.com'>Google Terjemahan</a>."
+  }
+}
