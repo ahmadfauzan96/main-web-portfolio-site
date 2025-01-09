@@ -52,51 +52,50 @@ export default async function PortfolioPage() {
   return (
     <div>
       <NavigationBar />
-      <header
-        className={styles.header + (cssClass ? " " + cssClass : "")}
-        lang={locale}
-        dir={direction(locale)}
-      >
+      <header className={styles.header + (cssClass ? " " + cssClass : "")}>
         <h1>{p("title")}</h1>
         {Object.keys(p.raw("explanations")).map(key => (
           <p key={key} dangerouslySetInnerHTML={{ __html: p.raw("explanations." + key) }} />
         ))}
       </header>
-      <section className={styles.content}>
-        {PORTFOLIOS.map(portfolio => (
-          <Portfolio
-            key={portfolio.id}
-            date={portfolio.establishedDate}
-            time={portfolio.establishedTime}
-            timeZone={portfolio.establishedTimeZone}
-            locale={locale}
-            title={
-              locale === "id"
-                ? portfolio.titleID
-                : locale === "eo"
-                ? portfolio.titleEO
-                : locale === "ja"
-                ? portfolio.titleJA
-                : portfolio.titleEN
-            }
-            description={
-              locale === "id"
-                ? portfolio.descriptionID
-                : locale === "eo"
-                ? portfolio.descriptionEO
-                : locale === "ja"
-                ? portfolio.descriptionJA
-                : portfolio.descriptionEN
-            }
-            {...portfolio}
-          />
-        )).sort(
-          (
-            { props: { establishedDate: olderDate, establishedTime: olderTime } },
-            { props: { establishedDate: newerDate, establishedTime: newerTime } }
-          ) => +Date.parse(`${newerDate}, ${newerTime}`) - +Date.parse(`${olderDate}, ${olderTime}`)
-        )}
-      </section>
+      <main className={styles.main}>
+        <section className={styles.content}>
+          {PORTFOLIOS.map(portfolio => (
+            <Portfolio
+              key={portfolio.id}
+              date={portfolio.establishedDate}
+              time={portfolio.establishedTime}
+              timeZone={portfolio.establishedTimeZone}
+              locale={locale}
+              title={
+                locale === "id"
+                  ? portfolio.titleID
+                  : locale === "eo"
+                  ? portfolio.titleEO
+                  : locale === "ja"
+                  ? portfolio.titleJA
+                  : portfolio.titleEN
+              }
+              description={
+                locale === "id"
+                  ? portfolio.descriptionID
+                  : locale === "eo"
+                  ? portfolio.descriptionEO
+                  : locale === "ja"
+                  ? portfolio.descriptionJA
+                  : portfolio.descriptionEN
+              }
+              {...portfolio}
+            />
+          )).sort(
+            (
+              { props: { establishedDate: olderDate, establishedTime: olderTime } },
+              { props: { establishedDate: newerDate, establishedTime: newerTime } }
+            ) =>
+              +Date.parse(`${newerDate}, ${newerTime}`) - +Date.parse(`${olderDate}, ${olderTime}`)
+          )}
+        </section>
+      </main>
       <Footer />
     </div>
   );

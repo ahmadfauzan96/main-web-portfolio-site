@@ -23,21 +23,12 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
 }
 
 .main ul {
-  margin: 25px;
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: -0.01em;
   list-style: none;
-  list-style-position: inside;
-}
-
-.main li div {
-  padding: 10px 5px 10px;
 }
 
 .main li:not(:last-of-type) {
@@ -49,21 +40,9 @@
   flex-direction: row;
 }
 
-@media screen and (max-width: 1200px) {
-  .content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .introduction,
-  .portfolio {
-    margin: auto;
-  }
-}
-
 .introduction,
 .portfolio {
-  padding: 10px 100px 25px;
+  padding: 10px 50px 25px;
 }
 
 .introduction h1,
@@ -73,21 +52,46 @@
   padding: 20px auto 20px;
 }
 
+.introduction p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: justify;
+}
+
+.portfolio div {
+  width: 20rem;
+}
+
 .portfolio a:hover h1 {
   color: light-dark(#e2e2b6, #03346e);
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
+@media screen and (max-width: 1200px) {
+  .content {
+    flex-direction: column;
   }
 
+  .portfolio {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
   .main {
     align-items: center;
   }
 
   .main ul {
-    text-align: center;
+    text-align: start;
+  }
+
+  .content {
+    margin-left: 12.5rem;
+    margin-right: 12.5rem;
+  }
+
+  .introduction {
+    padding: 10px 100px 25px;
   }
 }

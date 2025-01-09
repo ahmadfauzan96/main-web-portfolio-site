@@ -1,6 +1,10 @@
 .header {
   text-align: center;
-  padding: 5rem 10rem 5rem;
+  padding: 5rem 2.5rem 5rem;
+}
+
+.header h1 {
+  padding-bottom: 2.5rem;
 }
 
 .header-ja {
@@ -39,9 +43,16 @@
   font-family: "Noto Sans", "Noto Sans Tamil", sans-serif;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
 .content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding-left: 25px;
+  padding-right: 25px;
 }

@@ -1,11 +1,13 @@
-.switcher {
-  text-align: end;
+@media screen and (max-width: 978px) {
+  .switcher {
+    text-align: center;
+  }
 }
 
 .switcher label:dir(ltr) {
-  margin-right: 1.25rem;
+  margin-right: 1rem;
 }
 
 .switcher label:dir(rtl) {
-  margin-left: 1.25rem;
+  margin-left: 1rem;
 }

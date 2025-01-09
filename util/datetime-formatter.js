@@ -73,9 +73,76 @@ export const formatDateTimeUR = (date, time, timeZone) =>
     "ur-PK-u-nu-arabext",
     configOptions(timeZone, false)
   );
+export const formatDateTimePS = (date, time, timeZone) =>
+  new Date(`${date}, ${time}`).toLocaleDateString("ps-AF", configOptions(timeZone, true));
 export const formatDateTimeUG = (date, time, timeZone) =>
   new Date(`${date}, ${time}`).toLocaleDateString("ug-CN", configOptions(timeZone, true));
 export const formatDateTimeHE = (date, time, timeZone) =>
   new Date(`${date}, ${time}`).toLocaleDateString("he-PS", configOptions(timeZone, true));
 export const formatDateTimeYI = (date, time, timeZone) =>
   new Date(`${date}, ${time}`).toLocaleDateString("yi-DE", configOptions(timeZone, true));
+
+export const formatDateTime = (locale, date, time, timeZone) =>
+  locale === "id"
+    ? formatDateTimeID(date, time, timeZone)
+    : locale === "ms"
+    ? formatDateTimeMS(date, time, timeZone)
+    : locale === "es"
+    ? formatDateTimeES(date, time, timeZone)
+    : locale === "fr"
+    ? formatDateTimeFR(date, time, timeZone)
+    : locale === "fr-CA"
+    ? formatDateTimeFRCA(date, time, timeZone)
+    : locale === "de"
+    ? formatDateTimeDE(date, time, timeZone)
+    : locale === "no"
+    ? formatDateTimeNO(date, time, timeZone)
+    : locale === "nb"
+    ? formatDateTimeNB(date, time, timeZone)
+    : locale === "nn"
+    ? formatDateTimeNN(date, time, timeZone)
+    : locale === "nl"
+    ? formatDateTimeNL(date, time, timeZone)
+    : locale === "eo"
+    ? formatDateTimeEO(date, time, timeZone)
+    : locale === "ja"
+    ? formatDateTimeJA(date, time, timeZone)
+    : locale === "ko"
+    ? formatDateTimeKO(date, time, timeZone)
+    : locale === "zh-hans"
+    ? formatDateTimeZHS(date, time, timeZone)
+    : locale === "zh-hant"
+    ? formatDateTimeZHT(date, time, timeZone)
+    : locale === "yue"
+    ? formatDateTimeYUE(date, time, timeZone)
+    : locale === "th"
+    ? formatDateTimeTH(date, time, timeZone)
+    : locale === "vi"
+    ? formatDateTimeVI(date, time, timeZone)
+    : locale === "hi"
+    ? formatDateTimeHI(date, time, timeZone)
+    : locale === "mr"
+    ? formatDateTimeMR(date, time, timeZone)
+    : locale === "ne"
+    ? formatDateTimeNE(date, time, timeZone)
+    : locale === "sa"
+    ? formatDateTimeSA(date, time, timeZone)
+    : locale === "ta"
+    ? formatDateTimeTA(date, time, timeZone)
+    : locale === "ml"
+    ? formatDateTimeML(date, time, timeZone)
+    : locale === "ar"
+    ? formatDateTimeAR(date, time, timeZone)
+    : locale === "fa"
+    ? formatDateTimeFA(date, time, timeZone)
+    : locale === "ur"
+    ? formatDateTimeUR(date, time, timeZone)
+    : locale === "ps"
+    ? formatDateTimePS(date, time, timeZone)
+    : locale === "ug"
+    ? formatDateTimeUG(date, time, timeZone)
+    : locale === "he"
+    ? formatDateTimeHE(date, time, timeZone)
+    : locale === "yi"
+    ? formatDateTimeYI(date, time, timeZone)
+    : locale === "en" && formatDateTimeEN(date, time, timeZone);
