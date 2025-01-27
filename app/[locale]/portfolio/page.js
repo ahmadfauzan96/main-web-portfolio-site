@@ -1,8 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { direction } from "@/util/text-direction-setter";
-import { PORTFOLIOS } from "@/data";
 import NavigationBar from "@/components/navigation-bar";
-import Portfolio from "@/components/portfolio";
+import PortfolioList from "@/components/portfolio-list";
 import Footer from "@/components/footer";
 import styles from "./page.module.css";
 
@@ -48,11 +46,12 @@ export default async function PortfolioPage() {
       : locale.includes("hebr") || locale.includes("Hebr") || locale === "he" || locale === "yi"
       ? styles["header-he"]
       : "";
+  const headerStyles = styles.header + (cssClass ? " " + cssClass : "");
 
   return (
     <div>
       <NavigationBar />
-      <header className={styles.header + (cssClass ? " " + cssClass : "")}>
+      <header className={headerStyles}>
         <h1>{p("title")}</h1>
         {Object.keys(p.raw("explanations")).map(key => (
           <p key={key} dangerouslySetInnerHTML={{ __html: p.raw("explanations." + key) }} />
@@ -60,40 +59,7 @@ export default async function PortfolioPage() {
       </header>
       <main className={styles.main}>
         <section className={styles.content}>
-          {PORTFOLIOS.map(portfolio => (
-            <Portfolio
-              key={portfolio.id}
-              date={portfolio.establishedDate}
-              time={portfolio.establishedTime}
-              timeZone={portfolio.establishedTimeZone}
-              locale={locale}
-              title={
-                locale === "id"
-                  ? portfolio.titleID
-                  : locale === "eo"
-                  ? portfolio.titleEO
-                  : locale === "ja"
-                  ? portfolio.titleJA
-                  : portfolio.titleEN
-              }
-              description={
-                locale === "id"
-                  ? portfolio.descriptionID
-                  : locale === "eo"
-                  ? portfolio.descriptionEO
-                  : locale === "ja"
-                  ? portfolio.descriptionJA
-                  : portfolio.descriptionEN
-              }
-              {...portfolio}
-            />
-          )).sort(
-            (
-              { props: { establishedDate: olderDate, establishedTime: olderTime } },
-              { props: { establishedDate: newerDate, establishedTime: newerTime } }
-            ) =>
-              +Date.parse(`${newerDate}, ${newerTime}`) - +Date.parse(`${olderDate}, ${olderTime}`)
-          )}
+          <PortfolioList locale={locale} />
         </section>
       </main>
       <Footer />

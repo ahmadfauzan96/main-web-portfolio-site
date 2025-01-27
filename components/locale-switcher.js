@@ -39,6 +39,8 @@ export default function LocaleSwitcher() {
       ? "زبان سایت"
       : locale === "ur"
       ? "سائٹ کی زبان"
+      : locale === "ps"
+      ? "د سایټ ژبه"
       : locale === "ug"
       ? "بېكەت تىلى"
       : locale === "he"
@@ -58,9 +60,15 @@ export default function LocaleSwitcher() {
       ? "Noto Sans TC"
       : lang === "yue"
       ? "Noto Sans HK"
-      : lang === "ar" || lang === "fa" || lang === "ur" || lang === "ug" || lang === "ms-arab"
+      : lang.includes("arab") ||
+        lang.includes("Arab") ||
+        lang === "ar" ||
+        lang === "fa" ||
+        lang === "ur" ||
+        lang === "ps" ||
+        lang === "ug"
       ? "Noto Sans Arabic"
-      : lang === "he" || lang === "yi"
+      : lang.includes("hebr") || lang.includes("Hebr") || lang === "he" || lang === "yi"
       ? "Noto Sans Hebrew"
       : lang === "th"
       ? "Noto Sans Thai"
@@ -68,9 +76,9 @@ export default function LocaleSwitcher() {
   const languageFont = lang => (nonLGCFont(lang) ? ["Noto Sans", nonLGCFont(lang)] : ["Noto Sans"]);
 
   function changeLocale(locale) {
-    // * the useRouter() hook from "@/i18n/routing"
+    // * the usePathname() and useRouter() hook from "@/i18n/routing"
     push(pathname, { locale });
-    // * the useRouter() hook from from "next/navigation"
+    // * the usePathname() and useRouter() hook from from "next/navigation"
     // const pathnameArray = pathname.split("/");
     // const pathnameArrayWithoutLocale = pathnameArray.slice(2, pathnameArray.length);
     // const pathnameWithoutLocale = pathnameArrayWithoutLocale.join("/");

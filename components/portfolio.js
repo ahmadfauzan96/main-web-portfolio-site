@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
+import { formatDateTime, nonIANATimeZone } from "@/util/datetime-formatter";
 import { direction } from "@/util/text-direction-setter";
-import { formatDateTime } from "@/util/datetime-formatter";
 import ExternalLinkIcon from "@/icons/external-link-icon";
 import ClockIcon from "@/icons/clock-icon";
 import styles from "./portfolio.module.css";
@@ -8,7 +8,7 @@ import styles from "./portfolio.module.css";
 export default async function Portfolio({
   link,
   sourceCode,
-  tags,
+  tools,
   date,
   time,
   timeZone,
@@ -17,6 +17,10 @@ export default async function Portfolio({
   description,
 }) {
   const s = await getTranslations("sourceCode");
+  const dateTime =
+    formatDateTime(locale, date, time, timeZone) +
+    " " +
+    nonIANATimeZone(locale, date, time, timeZone, true);
 
   return (
     <div className={styles.container}>
@@ -27,16 +31,14 @@ export default async function Portfolio({
         </a>
       </h3>
       <p className={styles.datetime} dir={direction(locale)}>
-        <time dateTime={formatDateTime(locale, date, time, timeZone)}>
-          {formatDateTime(locale, date, time, timeZone)}
-        </time>{" "}
-        <ClockIcon /> {timeZone}
+        <time dateTime={dateTime}>{dateTime}</time> <ClockIcon /> {timeZone} (
+        {nonIANATimeZone(locale, date, time, timeZone, false)})
       </p>
       <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />
       <p className={styles.tools}>
-        {tags.map(tag => (
-          <span key={tag} className={styles.tool}>
-            {tag}
+        {tools.map(tool => (
+          <span key={tool} className={styles.tool}>
+            {tool}
           </span>
         ))}
       </p>

@@ -10,77 +10,79 @@ const configOptions = (timeZone, hour12) => ({
 });
 
 // * format date: yyyy-mm-dd || yyyy/mm/dd || yyyy-m-d || yyyy/m/d
-// * format time: hh:mm || h:mm
+// * format time: hh:mm || hh:m || h:mm || h:m
 export const formatDateTimeID = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("id-ID", configOptions(timeZone, false));
+  Intl.DateTimeFormat("id-ID", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
 export const formatDateTimeMS = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("ms-SG", configOptions(timeZone, true));
+  Intl.DateTimeFormat("ms-SG", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeEN = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("en-SG", configOptions(timeZone, true));
+  Intl.DateTimeFormat("en-SG", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeES = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("es-MX", configOptions(timeZone, true));
+  Intl.DateTimeFormat("es-MX", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeFR = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("fr-FR", configOptions(timeZone, false));
+  Intl.DateTimeFormat("fr-FR", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
 export const formatDateTimeFRCA = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("fr-CA", configOptions(timeZone, true));
+  Intl.DateTimeFormat("fr-CA", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeDE = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("de-DE", configOptions(timeZone, false));
+  Intl.DateTimeFormat("de-DE", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
 export const formatDateTimeNO = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("no-NO", configOptions(timeZone, true));
+  Intl.DateTimeFormat("no-NO", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeNB = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("nb-NO", configOptions(timeZone, true));
+  Intl.DateTimeFormat("nb-NO", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeNN = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("nn-NO", configOptions(timeZone, true));
+  Intl.DateTimeFormat("nn-NO", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeNL = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("nl-NL", configOptions(timeZone, false));
+  Intl.DateTimeFormat("nl-NL", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
 export const formatDateTimeEO = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("eo-ID", configOptions(timeZone, true));
+  Intl.DateTimeFormat("eo-ID", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeJA = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString(
-    "ja-JP-u-ca-japanese",
-    configOptions(timeZone, true)
+  Intl.DateTimeFormat("ja-JP-u-ca-japanese", configOptions(timeZone, true)).format(
+    new Date(`${date} ${time}`)
   );
 export const formatDateTimeKO = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("ko-KR", configOptions(timeZone, true));
+  Intl.DateTimeFormat("ko-KR", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeZHS = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("zh-hans-SG", configOptions(timeZone, true));
+  Intl.DateTimeFormat("zh-hans-SG", configOptions(timeZone, true)).format(
+    new Date(`${date} ${time}`)
+  );
 export const formatDateTimeZHT = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("zh-hant-TW", configOptions(timeZone, true));
+  Intl.DateTimeFormat("zh-hant-TW", configOptions(timeZone, true)).format(
+    new Date(`${date} ${time}`)
+  );
 export const formatDateTimeYUE = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("yue-HK", configOptions(timeZone, true));
+  Intl.DateTimeFormat("yue-HK", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeTH = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("th-TH", configOptions(timeZone, true));
+  Intl.DateTimeFormat("th-TH", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeVI = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("vi-VN", configOptions(timeZone, true));
+  Intl.DateTimeFormat("vi-VN", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeHI = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("hi-IN", configOptions(timeZone, false));
+  Intl.DateTimeFormat("hi-IN", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
 export const formatDateTimeMR = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("mr-IN", configOptions(timeZone, false));
+  Intl.DateTimeFormat("mr-IN", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
 export const formatDateTimeNE = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("ne-NP", configOptions(timeZone, true));
+  Intl.DateTimeFormat("ne-NP", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeSA = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("sa-IN", configOptions(timeZone, true));
+  Intl.DateTimeFormat("sa-IN", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeTA = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("ta-SG", configOptions(timeZone, false));
+  Intl.DateTimeFormat("ta-SG", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
 export const formatDateTimeML = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("ml-IN", configOptions(timeZone, false));
+  Intl.DateTimeFormat("ml-IN", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
 export const formatDateTimeAR = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("ar-SA", configOptions(timeZone, true));
+  Intl.DateTimeFormat("ar-SA", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeFA = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("fa-IR", configOptions(timeZone, true));
+  Intl.DateTimeFormat("fa-IR", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeUR = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString(
-    "ur-PK-u-nu-arabext",
-    configOptions(timeZone, false)
+  Intl.DateTimeFormat("ur-PK-u-nu-arabext", configOptions(timeZone, false)).format(
+    new Date(`${date} ${time}`)
   );
 export const formatDateTimePS = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("ps-AF", configOptions(timeZone, true));
+  Intl.DateTimeFormat("ps-AF", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeUG = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("ug-CN", configOptions(timeZone, true));
+  Intl.DateTimeFormat("ug-CN", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeHE = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("he-PS", configOptions(timeZone, true));
+  Intl.DateTimeFormat("he-PS", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 export const formatDateTimeYI = (date, time, timeZone) =>
-  new Date(`${date}, ${time}`).toLocaleDateString("yi-DE", configOptions(timeZone, true));
+  Intl.DateTimeFormat("yi-DE", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
 
 export const formatDateTime = (locale, date, time, timeZone) =>
   locale === "id"
@@ -146,3 +148,12 @@ export const formatDateTime = (locale, date, time, timeZone) =>
     : locale === "yi"
     ? formatDateTimeYI(date, time, timeZone)
     : locale === "en" && formatDateTimeEN(date, time, timeZone);
+
+export const nonIANATimeZone = (locale, date, time, timeZone, timeStyleIsFull) =>
+  Intl.DateTimeFormat(locale, {
+    dateStyle: "full",
+    timeStyle: timeStyleIsFull ? "full" : "long",
+    timeZone,
+  })
+    .formatToParts(new Date(date + " " + time))
+    .find(({ type }) => type === "timeZoneName")?.value;

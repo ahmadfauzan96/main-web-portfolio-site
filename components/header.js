@@ -1,5 +1,4 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { direction } from "@/util/text-direction-setter";
 import styles from "./header.module.css";
 
 export default async function Header() {
@@ -32,11 +31,12 @@ export default async function Header() {
       : locale.includes("hebr") || locale.includes("Hebr") || locale === "he" || locale === "yi"
       ? styles["header-he"]
       : "";
+  const headerStyles = styles.header + (cssClass ? " " + cssClass : "");
 
   switch (locale) {
     case "ko":
       return (
-        <header className={styles.header + (cssClass ? " " + cssClass : "")} lang="ko" dir="ltr">
+        <header className={headerStyles}>
           <h1>
             안녕하세요! 저는<strong>Ahmad Fauzan Bagaskoro</strong>입니다.
           </h1>
@@ -46,11 +46,7 @@ export default async function Header() {
 
     case "zh-hans" || "zh-Hans":
       return (
-        <header
-          className={styles.header + (cssClass ? " " + cssClass : "")}
-          lang="zh-hans"
-          dir="ltr"
-        >
+        <header className={headerStyles}>
           <h1>
             你好！我是<strong>Ahmad Fauzan Bagaskoro</strong>。
           </h1>
@@ -60,11 +56,7 @@ export default async function Header() {
 
     case "zh-hant" || "zh-Hant":
       return (
-        <header
-          className={styles.header + (cssClass ? " " + cssClass : "")}
-          lang="zh-hant"
-          dir="ltr"
-        >
+        <header className={headerStyles}>
           <h1>
             你好！我是<strong>Ahmad Fauzan Bagaskoro</strong>。
           </h1>
@@ -74,7 +66,7 @@ export default async function Header() {
 
     case "yue":
       return (
-        <header className={styles.header + (cssClass ? " " + cssClass : "")} lang="yue" dir="ltr">
+        <header className={headerStyles}>
           <h1>
             你好！我是<strong>Ahmad Fauzan Bagaskoro</strong>。
           </h1>
@@ -84,7 +76,7 @@ export default async function Header() {
 
     case "th":
       return (
-        <header className={styles.header + (cssClass ? " " + cssClass : "")} lang="th" dir="ltr">
+        <header className={headerStyles}>
           <h1>
             สวัสดีครับ! ผมชื่อ<strong>Ahmad Fauzan Bagaskoro</strong>.
           </h1>
@@ -94,11 +86,7 @@ export default async function Header() {
 
     default:
       return (
-        <header
-          className={styles.header + (cssClass ? " " + cssClass : "")}
-          lang={locale}
-          dir={direction(locale)}
-        >
+        <header className={headerStyles}>
           <h1 dangerouslySetInnerHTML={{ __html: h.raw("greetings") }} />
           <h2 dangerouslySetInnerHTML={{ __html: h.raw("whoAmI") }} />
         </header>
