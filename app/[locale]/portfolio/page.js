@@ -9,10 +9,7 @@ export async function generateMetadata() {
   return {
     title: m("title"),
     description: m("description"),
-    authors: [
-      { name: "Ahmad Fauzan Bagaskoro" },
-      { name: "Ahmad Fauzan Bagaskoro", url: "https://github.com/ahmadfauzan96" },
-    ],
+    authors: [{ name: "Ahmad Fauzan Bagaskoro", url: "https://github.com/ahmadfauzan96" }],
   };
 }
 
