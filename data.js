@@ -28,8 +28,9 @@ export const SKILLS = {
     "JavaScript ES6",
     "TypeScript",
     "React",
-    "NextJS",
+    "Next.js",
     "Vue.js",
+    "Angular",
   ],
   backEndSkills: ["JavaScript ES6", "Node.js", "Express.js", "EJS", "REST API", "OAuth 2.0"],
   databaseSkills: ["PostgreSQL", "MySQL 8.0", "MongoDB", "Mongoose"],
@@ -64,7 +65,7 @@ export const PORTFOLIOS = [
     id: "kanji-lookup",
     link: "https://kanji-lookup.vercel.app/",
     sourceCode: "https://github.com/ahmadfauzan96/kanji-lookup",
-    tools: ["React", "NextJS 14", "Bootstrap 5", "MUI", "REST API"],
+    tools: ["React", "Next.js 14", "Bootstrap 5", "MUI", "REST API"],
     establishedDate: "2024-10-23",
     establishedTime: "22:30",
     establishedTimeZone: "Asia/Jakarta",
@@ -120,12 +121,17 @@ export const GYEE_EXCERPTS = [
     excerpt: "Semoga Anda dapat menjalani kehidupan yang Anda inginkan, dan menikmatinya.",
   },
   {
-    lang: "zh-hans",
+    lang: "ku-Latn",
+    fonts: ["Noto Sans", "Noto Sans Arabic"],
+    excerpt: "Hêvî dikim ku hûn dikarin jiyana ku hûn dixwazin bijîn, û jê kêfê bikin.",
+  },
+  {
+    lang: "zh-Hans",
     fonts: ["Noto Sans", "Noto Sans SC"],
     excerpt: "希望你能过上你想要的生活，并享受它。",
   },
   {
-    lang: "zh-hant",
+    lang: "zh-Hant",
     fonts: ["Noto Sans", "Noto Sans TC"],
     excerpt: "希望你能過自己想要的生活，並且享受它。",
   },
@@ -192,13 +198,34 @@ export const GYEE_EXCERPTS = [
     excerpt: "امید ہے کہ آپ اپنی مرضی کی زندگی گزار سکتے ہیں، اور اس سے لطف اندوز ہو سکتے ہیں۔",
   },
   {
+    lang: "sd",
+    fonts: ["Noto Sans", "Noto Sans Arabic"],
+    excerpt: "اميد ته توهان پنهنجي مرضي جي زندگي گذاري سگهو ٿا، ۽ ان مان لطف اندوز ٿي سگهو ٿا.",
+  },
+  {
+    lang: "ckb",
+    fonts: ["Noto Sans", "Noto Sans Arabic"],
+    excerpt: "بەهیوای ئەوەی بتوانیت ئەو ژیانە بژیت کە دەتەوێت، و چێژ لێی وەربگریت.",
+  },
+  {
+    lang: "ps",
+    fonts: ["Noto Sans", "Noto Sans Arabic"],
+    excerpt: "هیله ده چې تاسو هغه ژوند وکړئ چې غواړئ یې، او خوند ترې واخلئ.",
+  },
+  {
     lang: "ug",
     fonts: ["Noto Sans", "Noto Sans Arabic"],
     excerpt:
       "ئۆزىڭىز ئارزۇ قىلغان ھاياتنى ئۆتكۈزۈشىڭىزنى ، ئۇنىڭدىن ھۇزۇرلىنىشىڭىزنى ئۈمىد قىلىمەن.",
   },
   {
-    lang: "ms-arab",
+    lang: "pa-Arab",
+    fonts: ["Noto Sans", "Noto Sans Arabic", "Noto Nastaliq Urdu"],
+    excerpt:
+      "امید اے کہ تسی اوہ زندگی گزار سکو گے جہڑی تسی چاہندے او، تے اس توں لطف اندوز ہو سکو گے۔",
+  },
+  {
+    lang: "ms-Arab",
     fonts: ["Noto Sans", "Noto Sans Arabic"],
     excerpt: "سموڬ اندا داڤت منجالني كهيدوڤن يڠ اندا ماهوكن، دان منعمتيڽ.",
   },

@@ -1,88 +1,95 @@
-const configOptions = (timeZone, hour12) => ({
+import { fromZonedTime } from "date-fns-tz";
+const configOptions = (timeZone, hour12 = true) => ({
   year: "numeric",
   month: "long",
   day: "numeric",
   weekday: "long",
   hour: "numeric",
   minute: "2-digit",
-  timeZone,
+  // dateStyle: "full",
+  // timeStyle: "full",
   hour12,
+  timeZone,
 });
 
 // * format date: yyyy-mm-dd || yyyy/mm/dd || yyyy-m-d || yyyy/m/d
 // * format time: hh:mm || hh:m || h:mm || h:m
-export const formatDateTimeID = (date, time, timeZone) =>
-  Intl.DateTimeFormat("id-ID", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
-export const formatDateTimeMS = (date, time, timeZone) =>
-  Intl.DateTimeFormat("ms-SG", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeEN = (date, time, timeZone) =>
-  Intl.DateTimeFormat("en-SG", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeES = (date, time, timeZone) =>
-  Intl.DateTimeFormat("es-MX", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeFR = (date, time, timeZone) =>
-  Intl.DateTimeFormat("fr-FR", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
-export const formatDateTimeFRCA = (date, time, timeZone) =>
-  Intl.DateTimeFormat("fr-CA", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeDE = (date, time, timeZone) =>
-  Intl.DateTimeFormat("de-DE", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
-export const formatDateTimeNO = (date, time, timeZone) =>
-  Intl.DateTimeFormat("no-NO", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeNB = (date, time, timeZone) =>
-  Intl.DateTimeFormat("nb-NO", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeNN = (date, time, timeZone) =>
-  Intl.DateTimeFormat("nn-NO", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeNL = (date, time, timeZone) =>
-  Intl.DateTimeFormat("nl-NL", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
-export const formatDateTimeEO = (date, time, timeZone) =>
-  Intl.DateTimeFormat("eo-ID", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeJA = (date, time, timeZone) =>
-  Intl.DateTimeFormat("ja-JP-u-ca-japanese", configOptions(timeZone, true)).format(
-    new Date(`${date} ${time}`)
+export const formatDateTimeID = (date, time, tz) =>
+  Intl.DateTimeFormat("id", configOptions(tz, false)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeMS = (date, time, tz) =>
+  Intl.DateTimeFormat("ms", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeEN = (date, time, tz) =>
+  Intl.DateTimeFormat("en", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeES = (date, time, tz) =>
+  Intl.DateTimeFormat("es", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeFR = (date, time, tz) =>
+  Intl.DateTimeFormat("fr", configOptions(tz, false)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeFRCA = (date, time, tz) =>
+  Intl.DateTimeFormat("fr-CA", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeDE = (date, time, tz) =>
+  Intl.DateTimeFormat("de", configOptions(tz, false)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeNO = (date, time, tz) =>
+  Intl.DateTimeFormat("no", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeNB = (date, time, tz) =>
+  Intl.DateTimeFormat("nb", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeNN = (date, time, tz) =>
+  Intl.DateTimeFormat("nn", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeNL = (date, time, tz) =>
+  Intl.DateTimeFormat("nl", configOptions(tz, false)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeEO = (date, time, tz) =>
+  Intl.DateTimeFormat("eo", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeJA = (date, time, tz) =>
+  Intl.DateTimeFormat("ja-u-ca-japanese", configOptions(tz)).format(
+    fromZonedTime(`${date} ${time}`, tz)
   );
-export const formatDateTimeKO = (date, time, timeZone) =>
-  Intl.DateTimeFormat("ko-KR", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeZHS = (date, time, timeZone) =>
-  Intl.DateTimeFormat("zh-hans-SG", configOptions(timeZone, true)).format(
-    new Date(`${date} ${time}`)
+export const formatDateTimeKO = (date, time, tz) =>
+  Intl.DateTimeFormat("ko", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeZH = (date, time, tz) =>
+  Intl.DateTimeFormat("zh", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeZHS = (date, time, tz) =>
+  Intl.DateTimeFormat("zh-Hans", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeZHT = (date, time, tz) =>
+  Intl.DateTimeFormat("zh-Hant", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeYUE = (date, time, tz) =>
+  Intl.DateTimeFormat("yue", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeTH = (date, time, tz) =>
+  Intl.DateTimeFormat("th", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeVI = (date, time, tz) =>
+  Intl.DateTimeFormat("vi", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeHI = (date, time, tz) =>
+  Intl.DateTimeFormat("hi", configOptions(tz, false)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeMR = (date, time, tz) =>
+  Intl.DateTimeFormat("mr", configOptions(tz, false)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeNE = (date, time, tz) =>
+  Intl.DateTimeFormat("ne", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeSA = (date, time, tz) =>
+  Intl.DateTimeFormat("sa", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeTA = (date, time, tz) =>
+  Intl.DateTimeFormat("ta", configOptions(tz, false)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeML = (date, time, tz) =>
+  Intl.DateTimeFormat("ml", configOptions(tz, false)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeAR = (date, time, tz) =>
+  Intl.DateTimeFormat("ar-u-nu-arab", configOptions(tz)).format(
+    fromZonedTime(`${date} ${time}`, tz)
   );
-export const formatDateTimeZHT = (date, time, timeZone) =>
-  Intl.DateTimeFormat("zh-hant-TW", configOptions(timeZone, true)).format(
-    new Date(`${date} ${time}`)
+export const formatDateTimeFA = (date, time, tz) =>
+  Intl.DateTimeFormat("fa", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeUR = (date, time, tz) =>
+  Intl.DateTimeFormat("ur-u-nu-arabext", configOptions(tz, false)).format(
+    fromZonedTime(`${date} ${time}`, tz)
   );
-export const formatDateTimeYUE = (date, time, timeZone) =>
-  Intl.DateTimeFormat("yue-HK", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeTH = (date, time, timeZone) =>
-  Intl.DateTimeFormat("th-TH", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeVI = (date, time, timeZone) =>
-  Intl.DateTimeFormat("vi-VN", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeHI = (date, time, timeZone) =>
-  Intl.DateTimeFormat("hi-IN", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
-export const formatDateTimeMR = (date, time, timeZone) =>
-  Intl.DateTimeFormat("mr-IN", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
-export const formatDateTimeNE = (date, time, timeZone) =>
-  Intl.DateTimeFormat("ne-NP", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeSA = (date, time, timeZone) =>
-  Intl.DateTimeFormat("sa-IN", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeTA = (date, time, timeZone) =>
-  Intl.DateTimeFormat("ta-SG", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
-export const formatDateTimeML = (date, time, timeZone) =>
-  Intl.DateTimeFormat("ml-IN", configOptions(timeZone, false)).format(new Date(`${date} ${time}`));
-export const formatDateTimeAR = (date, time, timeZone) =>
-  Intl.DateTimeFormat("ar-SA", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeFA = (date, time, timeZone) =>
-  Intl.DateTimeFormat("fa-IR", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeUR = (date, time, timeZone) =>
-  Intl.DateTimeFormat("ur-PK-u-nu-arabext", configOptions(timeZone, false)).format(
-    new Date(`${date} ${time}`)
-  );
-export const formatDateTimePS = (date, time, timeZone) =>
-  Intl.DateTimeFormat("ps-AF", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeUG = (date, time, timeZone) =>
-  Intl.DateTimeFormat("ug-CN", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeHE = (date, time, timeZone) =>
-  Intl.DateTimeFormat("he-PS", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
-export const formatDateTimeYI = (date, time, timeZone) =>
-  Intl.DateTimeFormat("yi-DE", configOptions(timeZone, true)).format(new Date(`${date} ${time}`));
+export const formatDateTimeSD = (date, time, tz) =>
+  Intl.DateTimeFormat("sd", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimePS = (date, time, tz) =>
+  Intl.DateTimeFormat("ps", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeUG = (date, time, tz) =>
+  Intl.DateTimeFormat("ug", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeCKB = (date, time, tz) =>
+  Intl.DateTimeFormat("ckb", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeHE = (date, time, tz) =>
+  Intl.DateTimeFormat("he", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
+export const formatDateTimeYI = (date, time, tz) =>
+  Intl.DateTimeFormat("yi", configOptions(tz)).format(fromZonedTime(`${date} ${time}`, tz));
 
 export const formatDateTime = (locale, date, time, timeZone) =>
   locale === "id"
@@ -111,9 +118,11 @@ export const formatDateTime = (locale, date, time, timeZone) =>
     ? formatDateTimeJA(date, time, timeZone)
     : locale === "ko"
     ? formatDateTimeKO(date, time, timeZone)
-    : locale === "zh-hans"
+    : locale === "zh"
+    ? formatDateTimeZH(date, time, timeZone)
+    : locale === "zh-hans" || locale === "zh-Hans"
     ? formatDateTimeZHS(date, time, timeZone)
-    : locale === "zh-hant"
+    : locale === "zh-hant" || locale === "zh-Hant"
     ? formatDateTimeZHT(date, time, timeZone)
     : locale === "yue"
     ? formatDateTimeYUE(date, time, timeZone)
@@ -139,10 +148,14 @@ export const formatDateTime = (locale, date, time, timeZone) =>
     ? formatDateTimeFA(date, time, timeZone)
     : locale === "ur"
     ? formatDateTimeUR(date, time, timeZone)
+    : locale === "sd"
+    ? formatDateTimeSD(date, time, timeZone)
     : locale === "ps"
     ? formatDateTimePS(date, time, timeZone)
     : locale === "ug"
     ? formatDateTimeUG(date, time, timeZone)
+    : locale === "ckb"
+    ? formatDateTimeCKB(date, time, timeZone)
     : locale === "he"
     ? formatDateTimeHE(date, time, timeZone)
     : locale === "yi"
@@ -150,10 +163,6 @@ export const formatDateTime = (locale, date, time, timeZone) =>
     : locale === "en" && formatDateTimeEN(date, time, timeZone);
 
 export const nonIANATimeZone = (locale, date, time, timeZone, timeStyleIsFull) =>
-  Intl.DateTimeFormat(locale, {
-    dateStyle: "full",
-    timeStyle: timeStyleIsFull ? "full" : "long",
-    timeZone,
-  })
-    .formatToParts(new Date(date + " " + time))
+  Intl.DateTimeFormat(locale, { timeStyle: timeStyleIsFull ? "full" : "long", timeZone })
+    .formatToParts(fromZonedTime(`${date} ${time}`, timeZone))
     .find(({ type }) => type === "timeZoneName")?.value;

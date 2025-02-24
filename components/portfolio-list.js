@@ -4,7 +4,7 @@ import Portfolio from "./portfolio";
 
 export default function PortfolioList({ locale, number }) {
   const dateInMilliseconds = (date, time, timeZone) =>
-    new Date(fromZonedTime(`${date} ${time}`, timeZone)).getTime();
+    fromZonedTime(`${date} ${time}`, timeZone).getTime();
 
   return PORTFOLIOS.map(portfolio => (
     <Portfolio
