@@ -82,6 +82,24 @@ export const PORTFOLIOS = [
     descriptionEO:
       "La retaplikaĵo kie uzantoj povas enirigi japanan kanĝijn por trovi ĝian informojn aŭ vortojn kiu enhavas ĝin, aŭ la legadon de kanĝijn por trovi kanĝijn kun tian sin.",
   },
+  {
+    id: "landing-page",
+    link: "https://revou-fundamental-course.github.io/02-jun-25-ahmadfauzan96/",
+    sourceCode: "https://github.com/revou-fundamental-course/02-jun-25-ahmadfauzan96",
+    tools: ["HTML", "CSS", "JavaScript"],
+    establishedDate: "2025-06-12",
+    establishedTime: "23:30",
+    establishedTimeZone: "Asia/Jakarta",
+    titleEN: "My Portfolio Website",
+    titleID: "Situs Portofolio Saya",
+    titleJA: "私のポートフォリオウェブサイト",
+    titleEO: "Mia Pordfolia Retejo",
+    descriptionEN: "A simple landing page built only by HTML, CSS, and JavaScript.",
+    descriptionID:
+      "Sebuah laman arahan sederhana yang dibuat hanya menggunakan HTML, CSS, dan JavaScript.",
+    descriptionJA: "HTML・CSS・JavaScriptだけで作成されたシンプルなレンディング・ページです。",
+    descriptionEO: "La simpla surteriĝa paĝo konstruita nur per HTML, CSS, kaj ĜavaSkripto.",
+  },
 ];
 
 export const GYEE_EXCERPTS = [
