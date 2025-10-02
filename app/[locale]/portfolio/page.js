@@ -4,6 +4,8 @@ import PortfolioList from "@/components/portfolio-list";
 import Footer from "@/components/footer";
 import styles from "./page.module.css";
 
+export const runtime = "edge";
+
 export async function generateMetadata() {
   const m = await getTranslations("metadata");
   return {
