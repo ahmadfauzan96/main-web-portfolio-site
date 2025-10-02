@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import { addComma } from "@/util/comma-formatter";
@@ -9,8 +11,6 @@ import PortfolioList from "@/components/portfolio-list";
 import GyeeExcerpts from "@/components/gyee-excerpts";
 import Footer from "@/components/footer";
 import styles from "./page.module.css";
-
-export const runtime = "edge";
 
 export async function generateMetadata() {
   const m = await getTranslations("metadata");
